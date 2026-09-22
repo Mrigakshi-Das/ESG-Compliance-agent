@@ -12,6 +12,11 @@ pandas>=2.2
 # tiny API + static HTML/CSS/JS gives that control for negligible extra cost.
 flask>=3.1
 
+# Production WSGI server (deployment) -- Flask's own dev server (app.run())
+# is single-threaded and explicitly not meant to serve real traffic; a host
+# like Render/Railway runs `gunicorn app.ui.server:app` instead.
+gunicorn>=23.0
+
 # LLM-assisted objective parsing (optional; Phase 6)
 anthropic>=0.34
 
