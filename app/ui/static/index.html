@@ -125,15 +125,6 @@
       <div class="dq-grid" id="dataQualityGrid"></div>
     </section>
 
-    <section class="panel guardrails-panel" id="guardrailsPanel" hidden>
-      <div class="panel-head">
-        <h2>Guardrails &amp; Reliability</h2>
-        <span class="pill" id="guardrailsReviewPill"></span>
-      </div>
-      <div class="guardrail-bars" id="guardrailBars"></div>
-      <div class="guardrail-events" id="guardrailEvents"></div>
-    </section>
-
     <section class="panel empty-state" id="emptyState">
       <p>No assessment has been run yet.</p>
       <p class="muted">Select a plant and assessment type above, or ask the agent a question directly, to populate this dashboard.</p>
@@ -142,6 +133,13 @@
   </main>
 
   <aside class="activity-console">
+    <div class="query-box">
+      <h3>Ask the Agent</h3>
+      <textarea id="queryInput" rows="3" placeholder="e.g. Why did Plant B's carbon intensity increase?"></textarea>
+      <div class="example-chips" id="exampleChips"></div>
+      <button id="askBtn" class="ask-btn">Ask</button>
+    </div>
+
     <div class="console-head">
       <h2>Agent Activity</h2>
       <span class="console-sub">Decision trace &mdash; not chain-of-thought</span>
@@ -150,12 +148,14 @@
       <p class="placeholder">Run an assessment to see the agent plan, select tools, and report findings here.</p>
     </div>
 
-    <div class="query-box">
-      <h3>Ask the Agent</h3>
-      <textarea id="queryInput" rows="3" placeholder="e.g. Why did Plant B's carbon intensity increase?"></textarea>
-      <div class="example-chips" id="exampleChips"></div>
-      <button id="askBtn" class="ask-btn">Ask</button>
-    </div>
+    <section class="panel guardrails-panel" id="guardrailsPanel" hidden>
+      <div class="panel-head">
+        <h2>Guardrails &amp; Reliability</h2>
+        <span class="pill" id="guardrailsReviewPill"></span>
+      </div>
+      <div class="guardrail-bars" id="guardrailBars"></div>
+      <div class="guardrail-events" id="guardrailEvents"></div>
+    </section>
   </aside>
 
 </div>

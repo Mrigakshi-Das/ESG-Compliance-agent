@@ -501,6 +501,11 @@ html, body {
   flex-direction: column;
   gap: 14px;
   max-height: calc(100vh - 112px);
+  /* Three independent sections (Ask the Agent, Agent Activity, Guardrails)
+     now share this sticky, height-capped column -- the console scrolls as
+     one unit instead of forcing just the activity feed to absorb whatever
+     space the other two don't use. */
+  overflow-y: auto;
 }
 
 .console-head h2 {
@@ -513,12 +518,10 @@ html, body {
 .console-sub { font-size: 10.5px; color: var(--text-faint); }
 
 .activity-feed {
-  flex: 1;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  min-height: 140px;
+  min-height: 100px;
   padding-right: 4px;
 }
 
