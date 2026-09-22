@@ -1,0 +1,22 @@
+# Core
+python-dateutil>=2.9
+
+# Data layer (Phase 2+)
+pandas>=2.2
+
+# UI (Phase 8) -- a thin Flask API over app.agent.orchestrator.run, serving a
+# hand-built static control-tower frontend (app/ui/static/). Streamlit was
+# the Phase 1 plan, but Phase 8's "must not look like a generic chatbot,
+# must resemble an ESG/manufacturing control tower" bar needs full control
+# over layout/visual design that Streamlit's component model fights; a
+# tiny API + static HTML/CSS/JS gives that control for negligible extra cost.
+flask>=3.1
+
+# LLM-assisted objective parsing (optional; Phase 6)
+anthropic>=0.34
+
+# Testing (Phase 10)
+pytest>=8.0
+
+# PDF export (Phase 7 report generator)
+fpdf2>=2.8

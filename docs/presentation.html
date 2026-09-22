@@ -1,0 +1,312 @@
+<title>Kiln to Compliance</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f3f4f5; --surface:#ffffff; --surface-2:#eceef0;
+    --ink:#12181d; --ink-dim:#4b5563; --ink-faint:#8590a0;
+    --accent:#0f9e93; --accent-bright:#0bb3a6; --accent-glow:rgba(15,158,147,0.12);
+    --good:#1f9d63; --good-bg:rgba(31,157,99,0.10);
+    --warn:#b5720a; --warn-bg:rgba(181,114,10,0.10);
+    --bad:#c8383e; --bad-bg:rgba(200,56,62,0.10);
+    --review:#6b57d6; --review-bg:rgba(107,87,214,0.10);
+    --line:#dde1e5;
+    --font-ui:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+    --font-mono:"IBM Plex Mono","SFMono-Regular",ui-monospace,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0a0e13; --surface:#10161d; --surface-2:#161d26;
+      --ink:#e7edf3; --ink-dim:#93a3b1; --ink-faint:#5c6b79;
+      --accent:#2dd4c8; --accent-bright:#2dd4c8; --accent-glow:rgba(45,212,200,0.18);
+      --good:#3ecf8e; --good-bg:rgba(62,207,142,0.14);
+      --warn:#e8a33d; --warn-bg:rgba(232,163,61,0.14);
+      --bad:#f0555a; --bad-bg:rgba(240,85,90,0.14);
+      --review:#9d8cf5; --review-bg:rgba(157,140,245,0.14);
+      --line:rgba(255,255,255,0.09);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0a0e13; --surface:#10161d; --surface-2:#161d26;
+    --ink:#e7edf3; --ink-dim:#93a3b1; --ink-faint:#5c6b79;
+    --accent:#2dd4c8; --accent-bright:#2dd4c8; --accent-glow:rgba(45,212,200,0.18);
+    --good:#3ecf8e; --good-bg:rgba(62,207,142,0.14);
+    --warn:#e8a33d; --warn-bg:rgba(232,163,61,0.14);
+    --bad:#f0555a; --bad-bg:rgba(240,85,90,0.14);
+    --review:#9d8cf5; --review-bg:rgba(157,140,245,0.14);
+    --line:rgba(255,255,255,0.09);
+  }
+
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--ink); font-family:var(--font-ui); line-height:1.6;}
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px 80px;}
+  h1,h2,h3{font-family:var(--font-ui); text-wrap:balance; letter-spacing:-0.01em;}
+  p{margin:0 0 16px;}
+  .mono{font-family:var(--font-mono);}
+  a{color:var(--accent-bright);}
+
+  /* ---- hero ---- */
+  .hero{background:var(--ink); color:var(--bg); padding:56px 24px 44px; margin-bottom:48px;}
+  :root[data-theme="light"] .hero{background:#12181d; color:#f3f4f5;}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .hero{background:#05080b; color:#e7edf3;} }
+  :root[data-theme="dark"] .hero{background:#05080b; color:#e7edf3;}
+  .hero-inner{max-width:760px; margin:0 auto;}
+  .eyebrow{font-family:var(--font-mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-bright); margin-bottom:14px;}
+  .hero h1{font-size:34px; font-weight:700; margin:0 0 10px; color:inherit;}
+  .hero .tagline{font-size:17px; opacity:0.82; margin:0 0 24px; max-width:56ch;}
+  .stat-row{display:flex; gap:28px; flex-wrap:wrap; margin-top:24px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.14);}
+  .stat{font-family:var(--font-mono);}
+  .stat b{display:block; font-size:22px; color:var(--accent-bright); font-weight:600;}
+  .stat span{font-size:12px; opacity:0.7;}
+
+  /* ---- sections ---- */
+  section{margin-bottom:52px;}
+  .sec-label{display:flex; align-items:baseline; gap:10px; margin-bottom:14px;}
+  .sec-num{font-family:var(--font-mono); font-size:13px; color:var(--accent); font-weight:600;}
+  .sec-title{font-size:22px; font-weight:700; margin:0;}
+  section > p, section > ul{color:var(--ink-dim); font-size:15.5px;}
+  section > p:first-of-type{color:var(--ink);}
+
+  .callout{background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--bad); border-radius:6px; padding:18px 20px; margin:18px 0;}
+  .callout.good{border-left-color:var(--good);}
+  .callout p{margin:0; color:var(--ink); font-size:14.5px;}
+  .callout .label{font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--bad); margin-bottom:6px; display:block;}
+  .callout.good .label{color:var(--good);}
+
+  /* ---- persona cards ---- */
+  .card-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:14px; margin-top:16px;}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:16px;}
+  .card h4{margin:0 0 8px; font-size:14.5px; color:var(--accent);}
+  .card p{margin:0; font-size:13.5px; color:var(--ink-dim);}
+
+  /* ---- diagram ---- */
+  .diagram-wrap{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:20px 12px; margin:18px 0;}
+  figure{margin:0;}
+  figcaption{font-size:12.5px; color:var(--ink-faint); text-align:center; margin-top:10px;}
+  svg text{font-family:var(--font-ui);}
+
+  /* ---- demo panel ---- */
+  .demo-panel{background:var(--ink); color:var(--bg); border-radius:10px; padding:22px 22px 20px; margin-top:16px;}
+  :root[data-theme="light"] .demo-panel{background:#12181d; color:#e7edf3;}
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .demo-panel{background:#05080b;} }
+  :root[data-theme="dark"] .demo-panel{background:#05080b;}
+  .demo-query{font-family:var(--font-mono); font-size:13px; color:var(--accent-bright); margin-bottom:14px;}
+  .demo-query::before{content:"\201C"; }
+  .demo-query::after{content:"\201D"; }
+  .demo-grid{display:flex; gap:24px; align-items:center; flex-wrap:wrap;}
+  .gauge{width:112px; height:112px; border-radius:50%; flex:none;
+    background:conic-gradient(var(--accent-bright) 0% 66.6%, rgba(255,255,255,0.12) 66.6% 100%);
+    display:flex; align-items:center; justify-content:center; position:relative;}
+  .gauge-inner{position:relative; width:88px; height:88px; border-radius:50%; background:#05080b; display:flex; flex-direction:column; align-items:center; justify-content:center;}
+  :root[data-theme="light"] .gauge-inner{background:#12181d;}
+  .gauge-inner b{font-family:var(--font-mono); font-size:22px; color:var(--accent-bright);}
+  .gauge-inner span{font-size:9px; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.06em;}
+  .demo-facts{flex:1; min-width:220px;}
+  .demo-facts .trace-line{font-family:var(--font-mono); font-size:12.5px; margin-bottom:5px; opacity:0.85;}
+  .demo-facts .trace-line b{color:var(--accent-bright); font-weight:500;}
+  .demo-finding{margin-top:14px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.12); font-size:13.5px; opacity:0.9;}
+  .demo-finding b{color:#e8a33d;}
+
+  /* ---- roadmap stepper ---- */
+  .stepper{display:flex; flex-direction:column; gap:0; margin-top:16px;}
+  .step{display:flex; gap:16px; padding-bottom:20px; position:relative;}
+  .step:not(:last-child)::before{content:""; position:absolute; left:15px; top:34px; bottom:0; width:1px; background:var(--line);}
+  .step-dot{flex:none; width:32px; height:32px; border-radius:50%; background:var(--surface); border:1.5px solid var(--accent); color:var(--accent); font-family:var(--font-mono); font-size:12px; font-weight:600; display:flex; align-items:center; justify-content:center;}
+  .step.done .step-dot{background:var(--good); border-color:var(--good); color:var(--bg);}
+  .step-body h4{margin:0 0 3px; font-size:14.5px;}
+  .step-body p{margin:0; font-size:13.5px; color:var(--ink-dim);}
+  .tag{display:inline-block; font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:0.06em; padding:2px 7px; border-radius:4px; background:var(--good-bg); color:var(--good); margin-left:8px;}
+
+  /* ---- pitch card ---- */
+  .pitch{background:linear-gradient(155deg, var(--accent-glow), transparent 60%), var(--surface); border:1px solid var(--line); border-radius:12px; padding:26px 26px 22px; margin-top:16px;}
+  .pitch .eyebrow{color:var(--accent);}
+  .pitch p{color:var(--ink); font-size:15.5px; margin-bottom:12px;}
+  .pitch .timer{font-family:var(--font-mono); font-size:12px; color:var(--ink-faint); margin-top:14px;}
+
+  footer{border-top:1px solid var(--line); padding-top:20px; margin-top:40px; font-size:13px; color:var(--ink-faint);}
+
+  table{width:100%; border-collapse:collapse; font-size:13.5px; margin-top:14px;}
+  th{text-align:left; font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--ink-faint); border-bottom:1px solid var(--line); padding:0 10px 8px 0;}
+  td{border-bottom:1px solid var(--line); padding:10px 10px 10px 0; color:var(--ink-dim); vertical-align:top;}
+  td:first-child, th:first-child{color:var(--ink); font-weight:500;}
+
+  @media (max-width:600px){
+    .hero h1{font-size:27px;}
+    .demo-grid{flex-direction:column; align-items:flex-start;}
+  }
+</style>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Agent field report</div>
+    <h1>Cement ESG &amp; Regulatory Compliance Agent</h1>
+    <p class="tagline">An autonomous agent that plans, retrieves, calculates, and investigates its way to a sourced ESG compliance readiness assessment — and shows its work at every step.</p>
+    <div class="stat-row">
+      <div class="stat"><b>3</b><span>plants modeled</span></div>
+      <div class="stat"><b>10</b><span>regulatory requirements</span></div>
+      <div class="stat"><b>15</b><span>agent-callable tools</span></div>
+      <div class="stat"><b>291</b><span>passing tests</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<section>
+  <div class="sec-label"><span class="sec-num">01</span><h2 class="sec-title">The problem</h2></div>
+  <p>Cement plants sit under two rising regulatory pressures — BEE's carbon/energy scheme (PAT/CCTS) and SEBI's ESG disclosure mandate (BRSR/BRSR Core). Each reporting cycle, someone has to determine which requirements actually apply, whether the plant's data supports a compliant position, what evidence backs it, and — when it doesn't — what's driving the gap and what to fix first.</p>
+  <p>That assessment is almost always done by hand, under deadline pressure, by pulling from systems that were never built to talk to each other. Non-compliance isn't usually invisible — it's <em>late</em>: discovered close to a filing or audit date, when remediation is more expensive and there's no time left to investigate the real cause properly.</p>
+</section>
+
+<section>
+  <div class="sec-label"><span class="sec-num">02</span><h2 class="sec-title">Why the existing approach fails</h2></div>
+  <p>A typical cycle: plant data is exported to spreadsheets and emailed to a corporate sustainability analyst, who manually consolidates it, re-enters KPI formulas (inconsistently, across plants and analysts), and checks applicability against regulations from memory or a consultant. Evidence documents get chased separately by email, often discovered missing or expired only during audit prep. Root-cause analysis for any flagged issue relies on a senior engineer just knowing what happened at that plant.</p>
+  <div class="callout">
+    <span class="label">Concrete failure mode</span>
+    <p>In this project's own demo data, Plant B's thermal energy consumption rose for six straight quarters before it would show up as a stark number in an annual review — an annual-cadence manual process finds this kind of slow degradation late, by design, not by accident.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-label"><span class="sec-num">03</span><h2 class="sec-title">The agent solution</h2></div>
+  <p>Given one natural-language objective, the system plans a task-specific sequence of tool calls, retrieves plant data and regulatory requirements, runs deterministic calculations, classifies compliance status, investigates root causes, and produces a prioritized, sourced recommendation — autonomously, and reproducibly, every time.</p>
+  <p>No number is ever LLM-generated. Calculations are pure Python functions; regulatory facts come only from a sourced knowledge base; and where a fact genuinely can't be confirmed (e.g. a plant's legal designation under PAT), the system says <span class="mono">Human Review Required</span> rather than guessing. This is deliberate — see the 60-second case for why this makes it an agent, not a chatbot, below.</p>
+</section>
+
+<section>
+  <div class="sec-label"><span class="sec-num">04</span><h2 class="sec-title">How the agent works</h2></div>
+  <p>One entry point, a different plan for every kind of question. For a full compliance assessment:</p>
+  <div class="diagram-wrap">
+    <figure role="img" aria-label="Flow diagram: User Objective leads to the AI Agent, which draws on Regulatory Knowledge and Plant Data, both feeding Calculations, then Compliance Assessment, Root Cause, Recommendation, and finally Management Decision.">
+      <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.55">
+          <line x1="88" y1="40" x2="170" y2="40" marker-end="url(#arrow)"/>
+          <line x1="210" y1="60" x2="205" y2="95" marker-end="url(#arrow)"/>
+          <line x1="232" y1="60" x2="338" y2="95" marker-end="url(#arrow)"/>
+          <line x1="205" y1="135" x2="335" y2="150" marker-end="url(#arrow)"/>
+          <line x1="340" y1="135" x2="340" y2="150" marker-end="url(#arrow)"/>
+          <line x1="395" y1="170" x2="440" y2="170" marker-end="url(#arrow)"/>
+          <line x1="570" y1="170" x2="610" y2="170" marker-end="url(#arrow)"/>
+        </g>
+        <text x="86" y="30" font-size="10" fill="currentColor" opacity="0.6" text-anchor="end">objective</text>
+        <text x="330" y="80" font-size="10" fill="currentColor" opacity="0.6" text-anchor="middle">plans &amp; calls</text>
+
+        <!-- User Objective -->
+        <rect x="10" y="20" width="78" height="40" rx="6" fill="var(--surface-2)" stroke="currentColor" stroke-opacity="0.3"/>
+        <text x="49" y="45" font-size="11" text-anchor="middle" fill="currentColor">User</text>
+
+        <!-- Agent -->
+        <rect x="170" y="20" width="100" height="40" rx="6" fill="var(--accent)" fill-opacity="0.18" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="220" y="45" font-size="12" text-anchor="middle" fill="currentColor" font-weight="600">AI Agent</text>
+
+        <!-- Regulatory + Plant Data -->
+        <rect x="150" y="95" width="110" height="40" rx="6" fill="var(--surface-2)" stroke="currentColor" stroke-opacity="0.3"/>
+        <text x="205" y="119" font-size="10.5" text-anchor="middle" fill="currentColor">Regulatory KB</text>
+        <rect x="285" y="95" width="110" height="40" rx="6" fill="var(--surface-2)" stroke="currentColor" stroke-opacity="0.3"/>
+        <text x="340" y="119" font-size="10.5" text-anchor="middle" fill="currentColor">Plant Data</text>
+
+        <!-- Calculations -->
+        <rect x="285" y="150" width="110" height="40" rx="6" fill="var(--surface-2)" stroke="currentColor" stroke-opacity="0.3"/>
+        <text x="340" y="174" font-size="10.5" text-anchor="middle" fill="currentColor">Calculations</text>
+
+        <!-- Compliance Assessment -->
+        <rect x="440" y="150" width="130" height="40" rx="6" fill="var(--surface-2)" stroke="currentColor" stroke-opacity="0.3"/>
+        <text x="505" y="174" font-size="10.5" text-anchor="middle" fill="currentColor">Compliance Assessment</text>
+
+        <!-- Root cause -->
+        <rect x="610" y="150" width="100" height="40" rx="6" fill="var(--warn)" fill-opacity="0.16" stroke="var(--warn)" stroke-width="1.3"/>
+        <text x="660" y="174" font-size="10.5" text-anchor="middle" fill="currentColor">Root Cause</text>
+
+        <!-- Recommendation -->
+        <rect x="285" y="230" width="110" height="40" rx="6" fill="var(--good)" fill-opacity="0.16" stroke="var(--good)" stroke-width="1.3"/>
+        <text x="340" y="254" font-size="10.5" text-anchor="middle" fill="currentColor">Recommendation</text>
+
+        <!-- Management decision -->
+        <line x1="395" y1="250" x2="470" y2="250" stroke="currentColor" stroke-width="1.4" opacity="0.55" marker-end="url(#arrow)"/>
+        <rect x="470" y="230" width="140" height="40" rx="6" fill="var(--accent)" fill-opacity="0.18" stroke="var(--accent)" stroke-width="1.5"/>
+        <text x="540" y="254" font-size="10.5" text-anchor="middle" fill="currentColor" font-weight="600">Management Decision</text>
+
+        <line x1="660" y1="190" x2="660" y2="230" stroke="currentColor" stroke-width="0" opacity="0"/>
+        <path d="M660,190 L660,210 L395,210 L395,236" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.55" marker-end="url(#arrow)"/>
+      </svg>
+      <figcaption>The agent's own future-state pipeline, as actually implemented in <span class="mono">app.agent.orchestrator</span> and <span class="mono">app.compliance.engine</span> — not a conceptual sketch.</figcaption>
+    </figure>
+  </div>
+  <p style="margin-top:16px">Every arrow above is a real function call, not a metaphor: regulatory applicability comes from a sourced JSON knowledge base, plant data from validated tool calls, calculations from deterministic Python, and root-cause investigation from a documented production → electricity → thermal energy → fuel → maintenance driver chain.</p>
+</section>
+
+<section>
+  <div class="sec-label"><span class="sec-num">05</span><h2 class="sec-title">Live demo</h2></div>
+  <p>This is a real, captured run — not a scripted transcript. Full trace in <a href="DEMO.md">DEMO.md</a>.</p>
+  <div class="demo-panel">
+    <div class="demo-query">Why is Plant B's ESG compliance readiness low, and what should management address first?</div>
+    <div class="demo-grid">
+      <div class="gauge"><div class="gauge-inner"><b>66.6</b><span>readiness</span></div></div>
+      <div class="demo-facts">
+        <div class="trace-line">[✓] <b>plan_created</b> — 9 tools selected</div>
+        <div class="trace-line">[✓] <b>data_validated</b> — Clean, no missing/conflicting data</div>
+        <div class="trace-line">[⚠] <b>gap_identified</b> — 11 gaps across 10 requirements</div>
+        <div class="trace-line">[✓] <b>root_cause_investigated</b> — thermal energy trend</div>
+        <div class="trace-line">[✓] <b>recommendation_built</b> — 11 actions, prioritized</div>
+      </div>
+    </div>
+    <div class="demo-finding"><b>Top priority (Critical):</b> emission intensity 0.977 vs. target 0.78 — traced to a <b>Kiln Refractory Lining overdue since 2025-06-15</b>, deferred twice for production schedule pressure. Grounded impact estimate: <b>68,600 GJ</b> and <b>17,150 tCO2e</b> of potential reduction if restored to this plant's own historical best.</div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-label"><span class="sec-num">06</span><h2 class="sec-title">Business value</h2></div>
+  <p>Every persona gets a different thing out of the same underlying assessment:</p>
+  <div class="card-grid">
+    <div class="card"><h4>Sustainability Manager</h4><p>A defensible, sourced readiness assessment on demand — not a multi-day spreadsheet exercise.</p></div>
+    <div class="card"><h4>Plant Head</h4><p>A specific, owned, time-boxed action tied to a named cause — not an abstract "improve ESG" mandate.</p></div>
+    <div class="card"><h4>Energy Manager</h4><p>Which metric is trending against its own best history, with a grounded savings estimate to prioritize against.</p></div>
+    <div class="card"><h4>Compliance Team</h4><p>A transparent Applicable / Not Applicable / Human Review verdict per requirement — evidence status visible before audit day.</p></div>
+    <div class="card"><h4>Corporate ESG Team</h4><p>Every plant scored on the same KPI definitions — apples-to-apples roll-up, not reconciled spreadsheets.</p></div>
+  </div>
+  <table>
+    <thead><tr><th>Benefit</th><th>Estimate</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr><td>Manual assessment time</td><td>~70–85% reduction</td><td>Assumption — no real deployment to measure yet</td></tr>
+      <tr><td>Energy-efficiency opportunity</td><td>68,600 GJ / 17,150 tCO2e</td><td>Real output of this system, on synthetic data</td></tr>
+      <tr><td>Compliance risk</td><td>Not quantified</td><td>System doesn't invent a cost figure it has no basis for</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:10px; font-size:13px;">Full breakdown, all assumptions labeled: <a href="BUSINESS_CASE.md">BUSINESS_CASE.md</a></p>
+</section>
+
+<section>
+  <div class="sec-label"><span class="sec-num">07</span><h2 class="sec-title">Limitations</h2></div>
+  <p>Stated plainly, not buried: synthetic data (3 plants, not a real deployment); 10 regulatory requirements covered, not the full universe a real plant answers to; no live SAP or IoT/CEMS integration yet; two categories of finding structurally require human review (PAT/CCTS legal designation, BRSR company ownership) because the facts needed don't exist in this dataset; and the regulatory knowledge base needs a periodic human-owned update process as rules change.</p>
+</section>
+
+<section>
+  <div class="sec-label"><span class="sec-num">08</span><h2 class="sec-title">Future scope</h2></div>
+  <div class="stepper">
+    <div class="step done"><div class="step-dot">1</div><div class="step-body"><h4>Synthetic data MVP<span class="tag">done</span></h4><p>This project — full agent pipeline, 291 tests, control-tower UI.</p></div></div>
+    <div class="step"><div class="step-dot">2</div><div class="step-body"><h4>Real plant databases</h4><p>Swap the synthetic backend for real per-plant databases — no agent code changes.</p></div></div>
+    <div class="step"><div class="step-dot">3</div><div class="step-body"><h4>SAP integration</h4><p>Live production data instead of a synthetic source.</p></div></div>
+    <div class="step"><div class="step-dot">4</div><div class="step-body"><h4>IoT / CEMS integration</h4><p>Near-real-time energy and emissions tracking instead of quarterly.</p></div></div>
+    <div class="step"><div class="step-dot">5</div><div class="step-body"><h4>Enterprise ESG platform</h4><p>Multi-tenant, role-based access, workflow integration, automated scenario scoring.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-label"><span class="sec-num">—</span><h2 class="sec-title">60 seconds: why this is an agent, not a chatbot</h2></div>
+  <div class="pitch">
+    <p>A chatbot takes text in, text out — no memory of a task, no plan, no decision it's accountable for. This system, given one question, independently plans a multi-step task: a different plan for a single-metric question than for a full compliance assessment. It decides which of fifteen tools to call, and reacts to what they return — missing data skips a calculation instead of guessing at a number.</p>
+    <p>It carries state across the whole run: every finding labeled Fact, Assumption, or Hypothesis, never blurred together. And it shows its reasoning at the decision level — objective, plan, each tool call, each gap, each recommendation — without ever exposing a hidden chain-of-thought.</p>
+    <p>That's autonomy, planning, tool use, state, and a real feedback loop. A chatbot has none of those. This does — and you can watch it happen.</p>
+    <div class="timer">≈ 60 seconds read aloud · full technical case: <a href="AI_AGENT_QUALIFICATION.md">AI_AGENT_QUALIFICATION.md</a></div>
+  </div>
+</section>
+
+<footer>
+  Cement ESG &amp; Regulatory Compliance Agent — working code, 291 passing tests, and this document all live in the same repository. See <a href="../README.md">README.md</a> for setup, <a href="DEMO.md">DEMO.md</a> for the full trace, and <a href="BUSINESS_CASE.md">BUSINESS_CASE.md</a> for the complete analysis.
+</footer>
+
+</div>

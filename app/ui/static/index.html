@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cement ESG Control Tower</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">CT</div>
+    <div class="brand-text">
+      <h1>Cement ESG &amp; Regulatory Compliance Agent</h1>
+      <p>Autonomous compliance readiness &amp; root-cause intelligence &mdash; control tower view</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <label class="field">
+      <span>Plant</span>
+      <select id="plantSelect"></select>
+    </label>
+    <label class="field">
+      <span>Reporting Period</span>
+      <select id="periodSelect"></select>
+    </label>
+    <label class="field">
+      <span>Assessment Type</span>
+      <select id="typeSelect"></select>
+    </label>
+    <button id="runBtn" class="run-btn">
+      <span class="run-btn-label">Run Assessment</span>
+      <span class="spinner" hidden></span>
+    </button>
+  </div>
+
+  <div class="system-status">
+    <span class="status-dot" id="systemDot"></span>
+    <span id="systemStatusText">Agent Idle</span>
+  </div>
+</header>
+
+<div class="layout">
+
+  <main class="dashboard" id="dashboard">
+
+    <div class="banner banner-error" id="errorBanner" hidden></div>
+    <div class="banner banner-warning" id="incompleteBanner" hidden></div>
+
+    <section class="panel query-result" id="queryResultPanel" hidden>
+      <div class="panel-head">
+        <h2>Query Result</h2>
+        <span class="pill" id="queryConfidencePill"></span>
+      </div>
+      <p class="query-echo" id="queryEcho"></p>
+      <p class="query-answer" id="queryAnswer"></p>
+      <div class="assumption-strip" id="queryAssumptions"></div>
+    </section>
+
+    <section class="panel guardrails-panel" id="guardrailsPanel" hidden>
+      <div class="panel-head">
+        <h2>Guardrails &amp; Reliability</h2>
+        <span class="pill" id="guardrailsReviewPill"></span>
+      </div>
+      <div class="guardrail-bars" id="guardrailBars"></div>
+      <div class="guardrail-events" id="guardrailEvents"></div>
+    </section>
+
+    <section class="panel readiness-hero" id="readinessHero" hidden>
+      <div class="panel-head">
+        <h2>Overall ESG Readiness Score</h2>
+        <button class="ghost-btn" id="downloadReportBtn" hidden>Download Full Report (PDF)</button>
+      </div>
+      <div class="hero-body">
+        <div class="score-ring-wrap">
+          <div class="score-ring" id="scoreRing">
+            <div class="score-ring-hole">
+              <span class="score-number" id="scoreNumber">&ndash;</span>
+              <span class="score-label" id="scoreBand">&nbsp;</span>
+            </div>
+          </div>
+        </div>
+        <div class="category-grid" id="categoryGrid"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="gapsPanel" hidden>
+      <div class="panel-head">
+        <h2>Key Gaps</h2>
+        <span class="panel-count" id="gapsCount"></span>
+      </div>
+      <div class="table-scroll">
+        <table class="data-table" id="gapsTable">
+          <thead>
+            <tr><th>Requirement</th><th>Status</th><th>Metric</th><th>Priority</th><th>Notes</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" id="rootCausePanel" hidden>
+      <div class="panel-head">
+        <h2>Root-Cause Investigation</h2>
+      </div>
+      <div id="rootCauseFlow"></div>
+    </section>
+
+    <section class="panel" id="actionsPanel" hidden>
+      <div class="panel-head">
+        <h2>Corrective Actions</h2>
+        <span class="panel-count" id="actionsCount"></span>
+      </div>
+      <div class="table-scroll">
+        <table class="data-table" id="actionsTable">
+          <thead>
+            <tr><th>Action</th><th>Owner</th><th>Priority</th><th>Timeline</th><th>Expected Impact</th><th>Status</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" id="dataQualityPanel" hidden>
+      <div class="panel-head">
+        <h2>Data Quality</h2>
+        <span class="pill" id="dataQualityOverallPill"></span>
+      </div>
+      <div class="dq-grid" id="dataQualityGrid"></div>
+    </section>
+
+    <section class="panel empty-state" id="emptyState">
+      <p>No assessment has been run yet.</p>
+      <p class="muted">Select a plant and assessment type above, or ask the agent a question directly, to populate this dashboard.</p>
+    </section>
+
+  </main>
+
+  <aside class="activity-console">
+    <div class="console-head">
+      <h2>Agent Activity</h2>
+      <span class="console-sub">Decision trace &mdash; not chain-of-thought</span>
+    </div>
+    <div class="activity-feed" id="activityFeed">
+      <p class="placeholder">Run an assessment to see the agent plan, select tools, and report findings here.</p>
+    </div>
+
+    <div class="query-box">
+      <h3>Ask the Agent</h3>
+      <textarea id="queryInput" rows="3" placeholder="e.g. Why did Plant B's carbon intensity increase?"></textarea>
+      <div class="example-chips" id="exampleChips"></div>
+      <button id="askBtn" class="ask-btn">Ask</button>
+    </div>
+  </aside>
+
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

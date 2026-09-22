@@ -1,0 +1,19 @@
+plant_id,period,electricity_consumption_mwh,thermal_energy_gj,fuel_consumption_tonnes,alternative_fuel_thermal_substitution_pct,renewable_energy_mwh,specific_electricity_consumption_kwh_per_t_cement,specific_thermal_energy_consumption_gj_per_t_clinker,source_system
+Plant A,FY2024-25 Q3,33755.0,890600.0,23749.3,28.0,2700.4,78.5,3.05,Energy_Meters_CEMS
+Plant A,FY2024-25 Q4,33930.0,893850.0,23504.9,29.0,3053.7,78.0,3.03,Energy_Meters_CEMS
+Plant A,FY2025-26 Q1,34100.0,896980.0,23255.0,30.0,3410.0,77.5,3.01,Energy_Meters_CEMS
+Plant A,FY2025-26 Q2,34265.0,897000.0,22591.1,32.0,4111.8,77.0,2.99,Energy_Meters_CEMS
+Plant A,FY2025-26 Q3,34272.0,899910.0,22331.1,33.0,4455.4,76.5,2.97,Energy_Meters_CEMS
+Plant A,FY2025-26 Q4,34352.0,899750.0,21660.6,35.0,4809.3,76.0,2.95,Energy_Meters_CEMS
+Plant B,FY2024-25 Q3,21312.0,731300.0,24376.7,10.0,639.4,96,3.55,Energy_Meters_CEMS
+Plant B,FY2024-25 Q4,20900.0,734400.0,24480.0,10.0,627.0,95,3.6,Energy_Meters_CEMS
+Plant B,FY2025-26 Q1,21146.0,737300.0,24849.7,9.0,634.4,97,3.65,Energy_Meters_CEMS
+Plant B,FY2025-26 Q2,23128.0,688200.0,23194.9,9.0,693.8,118,3.72,Energy_Meters_CEMS
+Plant B,FY2025-26 Q3,20972.0,756360.0,25772.3,8.0,629.2,98,3.82,Energy_Meters_CEMS
+Plant B,FY2025-26 Q4,20988.0,764400.0,26046.2,8.0,629.6,99,3.9,Energy_Meters_CEMS
+Plant C,FY2024-25 Q3,15480.0,495280.0,15592.1,15.0,928.8,86,3.28,Energy_Meters_CEMS
+Plant C,FY2024-25 Q4,15561.0,500310.0,15565.2,16.0,1089.3,85.5,3.27,Energy_Meters_CEMS
+Plant C,FY2025-26 Q1,15640.0,505300.0,15720.4,16.0,1094.8,85,3.26,Energy_Meters_CEMS
+Plant C,FY2025-26 Q2,15427.5,494000.0,15185.9,17.0,1234.2,85,3.25,Energy_Meters_CEMS
+Plant C,FY2025-26 Q3,15759.2,508680.0,15637.2,17.0,1260.7,84.5,3.24,Energy_Meters_CEMS
+Plant C,FY2025-26 Q4,15792.0,510340.0,15499.2,18.0,1421.3,84,3.23,Energy_Meters_CEMS

@@ -1,0 +1,19 @@
+plant_id,period,avg_ambient_temp_c,rainfall_mm,avg_humidity_pct,source_system
+Plant A,FY2024-25 Q3,27.5,120,58,Site_Weather_Station
+Plant A,FY2024-25 Q4,22.0,25,45,Site_Weather_Station
+Plant A,FY2025-26 Q1,32.5,40,42,Site_Weather_Station
+Plant A,FY2025-26 Q2,31.0,650,78,Site_Weather_Station
+Plant A,FY2025-26 Q3,28.0,140,60,Site_Weather_Station
+Plant A,FY2025-26 Q4,21.5,20,44,Site_Weather_Station
+Plant B,FY2024-25 Q3,27.0,110,56,Site_Weather_Station
+Plant B,FY2024-25 Q4,21.5,20,43,Site_Weather_Station
+Plant B,FY2025-26 Q1,33.0,35,41,Site_Weather_Station
+Plant B,FY2025-26 Q2,31.5,610,76,Site_Weather_Station
+Plant B,FY2025-26 Q3,27.5,130,58,Site_Weather_Station
+Plant B,FY2025-26 Q4,21.0,18,42,Site_Weather_Station
+Plant C,FY2024-25 Q3,27.2,115,57,Site_Weather_Station
+Plant C,FY2024-25 Q4,21.8,22,44,Site_Weather_Station
+Plant C,FY2025-26 Q1,32.0,38,42,Site_Weather_Station
+Plant C,FY2025-26 Q2,30.5,630,77,Site_Weather_Station
+Plant C,FY2025-26 Q3,27.8,135,59,Site_Weather_Station
+Plant C,FY2025-26 Q4,21.2,19,43,Site_Weather_Station

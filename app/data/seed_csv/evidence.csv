@@ -1,0 +1,22 @@
+document_id,plant_id,document_type,document_date,expiry_date,status,related_requirement
+DOC-A-2025-001,Plant A,BRSR Annual Report,2025-05-28,,Valid,SEBI BRSR - Annual Disclosure
+DOC-A-2025-002,Plant A,GHG Verification Statement,2025-06-10,,Valid,SEBI BRSR Core - GHG Assurance
+DOC-A-2025-003,Plant A,CEMS Calibration Certificate,2025-04-18,2025-10-18,Valid,CPCB CEMS Monitoring
+DOC-A-2025-004,Plant A,CEMS Calibration Certificate,2025-07-20,2026-01-20,Valid,CPCB CEMS Monitoring
+DOC-A-2025-005,Plant A,CEMS Calibration Certificate,2025-10-22,2026-04-22,Valid,CPCB CEMS Monitoring
+DOC-A-2025-006,Plant A,BRSR Annual Report,2026-05-30,,Valid,SEBI BRSR - Annual Disclosure
+DOC-A-2025-007,Plant A,Environmental Clearance Renewal,2022-03-01,2027-03-01,Valid,State PCB - Environmental Clearance
+DOC-B-2025-001,Plant B,BRSR Annual Report,2025-05-30,,Valid,SEBI BRSR - Annual Disclosure
+DOC-B-2025-002,Plant B,GHG Verification Statement,2025-06-15,,Valid,SEBI BRSR Core - GHG Assurance
+DOC-B-2025-003,Plant B,CEMS Calibration Certificate,2025-04-05,2025-10-05,Valid,CPCB CEMS Monitoring
+DOC-B-2025-004,Plant B,CEMS Calibration Certificate,2025-09-10,2026-03-10,Valid,CPCB CEMS Monitoring
+DOC-B-2025-005,Plant B,Environmental Clearance Renewal,2020-04-01,2025-04-01,Expired,State PCB - Environmental Clearance
+DOC-B-2025-006,Plant B,BRSR Annual Report,2026-06-05,,Valid,SEBI BRSR - Annual Disclosure
+DOC-B-2025-007,Plant B,GHG Verification Statement,2026-06-20,,Valid,SEBI BRSR Core - GHG Assurance
+DOC-C-2025-001,Plant C,BRSR Annual Report,2025-05-25,,Valid,SEBI BRSR - Annual Disclosure
+DOC-C-2025-002,Plant C,GHG Verification Statement,2025-06-08,,Valid,SEBI BRSR Core - GHG Assurance
+DOC-C-2025-010,Plant C,CEMS Calibration Certificate,2025-04-12,2025-10-12,Valid,CPCB CEMS Monitoring
+DOC-C-2026-014,Plant C,CEMS Calibration Certificate,2026-04-03,2026-10-03,Valid,CPCB CEMS Monitoring
+DOC-C-2026-014,Plant C,CEMS Calibration Certificate,2026-04-05,2026-10-05,Valid,CPCB CEMS Monitoring
+DOC-C-2025-005,Plant C,BRSR Annual Report,2026-05-29,,Valid,SEBI BRSR - Annual Disclosure
+DOC-C-2025-006,Plant C,GHG Verification Statement,2026-06-12,,Valid,SEBI BRSR Core - GHG Assurance

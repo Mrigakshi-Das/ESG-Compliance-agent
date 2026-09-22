@@ -1,0 +1,156 @@
+[
+  {
+    "requirement_id": "SEBI-BRSR-001",
+    "regulation": "Business Responsibility and Sustainability Reporting (BRSR)",
+    "authority": "Securities and Exchange Board of India (SEBI)",
+    "industry": "Cross-industry (applies to the listed company, cement companies included)",
+    "requirement_description": "A listed company among the top 1,000 by market capitalization must file an annual Business Responsibility and Sustainability Report disclosing its performance against the nine principles of the National Guidelines on Responsible Business Conduct (NGRBC), covering Essential indicators (mandatory) and Leadership indicators (voluntary).",
+    "applicability": "Applies at the LISTED COMPANY level, not the plant level -- a cement plant's BRSR obligation is inherited entirely from whether its parent company is among the top 1,000 listed entities by market capitalization on NSE/BSE. A plant cannot be individually 'BRSR applicable'; only its parent listed entity can be.",
+    "applicability_conditions": [
+      {
+        "level": "company",
+        "criterion": "listed_entity_market_cap_rank",
+        "description": "The plant's parent company must be a listed entity ranked in the top 1,000 by market capitalization on NSE/BSE.",
+        "parameter": "Top 1000 by market capitalization"
+      }
+    ],
+    "metric": "BRSR filing completeness (Essential + Leadership indicators across 9 NGRBC principles)",
+    "unit": "N/A (disclosure completeness, not a measured quantity)",
+    "target": "Full filing of all Essential indicators; Leadership indicators are voluntary",
+    "reporting_period": "Annual, per financial year; mandatory from FY2022-23 (voluntary for FY2021-22)",
+    "reporting_frequency": "Annual",
+    "required_evidence": [
+      "BRSR Annual Report (filed with the stock exchange as part of the Annual Report)"
+    ],
+    "effective_date": "2022-04-01",
+    "source_id": "SEBI-BRSR-2021",
+    "source_title": "Business Responsibility and Sustainability Reporting by Listed Entities",
+    "source_url": "https://www.sebi.gov.in/legal/circulars/may-2021/business-responsibility-and-sustainability-reporting-by-listed-entities_50096.html",
+    "source_date": "2021-05-10",
+    "last_reviewed": "2026-09-12",
+    "confidence": "High",
+    "status": "Active",
+    "version": "1.0",
+    "superseded_or_amended_by": null,
+    "notes": "Circular No. SEBI/HO/CFD/CMD-2/P/CIR/2021/562. The circular replaced the earlier Business Responsibility Report (BRR). This KB does not track which company owns which of the demo plants (Plant A/B/C), since that fact does not exist in the Phase 2 synthetic dataset -- see app/compliance/context.py for how the applicability engine handles that gap."
+  },
+  {
+    "requirement_id": "SEBI-BRSRCORE-001",
+    "regulation": "BRSR Core",
+    "authority": "Securities and Exchange Board of India (SEBI)",
+    "industry": "Cross-industry (applies to the listed company, cement companies included)",
+    "requirement_description": "In addition to the full BRSR (SEBI-BRSR-001), a listed entity must disclose the BRSR Core subset of Key Performance Indicators, covering nine ESG attributes including GHG footprint, water footprint, energy footprint, waste management, and enabling gender diversity in business.",
+    "applicability": "Same top-1,000-listed-entity population as BRSR (SEBI-BRSR-001) -- applicability is inherited from the parent company's market-cap rank, not the plant.",
+    "applicability_conditions": [
+      {
+        "level": "company",
+        "criterion": "listed_entity_market_cap_rank",
+        "description": "Same population as BRSR: top 1,000 listed entities by market capitalization.",
+        "parameter": "Top 1000 by market capitalization"
+      }
+    ],
+    "metric": "BRSR Core KPI disclosure completeness (GHG footprint, water footprint, energy footprint, waste, and 6 other ESG attributes)",
+    "unit": "N/A (disclosure completeness, not a measured quantity)",
+    "target": "Full disclosure of all BRSR Core KPIs applicable to the entity",
+    "reporting_period": "Annual, alongside the entity's BRSR filing",
+    "reporting_frequency": "Annual",
+    "required_evidence": [
+      "BRSR Core KPI disclosure (part of the BRSR Annual Report)"
+    ],
+    "effective_date": "2023-07-12",
+    "source_id": "SEBI-BRSR-CORE-2023",
+    "source_title": "BRSR Core -- Framework for assurance and ESG disclosures for value chain",
+    "source_url": "https://ca2013.com/wp-content/uploads/2023/07/SEBI-Circular_12.07.2023.pdf",
+    "source_date": "2023-07-12",
+    "last_reviewed": "2026-09-12",
+    "confidence": "High",
+    "status": "Active",
+    "version": "1.0",
+    "superseded_or_amended_by": "SEBI-BRSR-EASE-2025 (28 Mar 2025) -- amends related value-chain/assurance provisions; see SEBI-BRSRCORE-003",
+    "notes": "Circular No. SEBI/HO/CFD/CFD-SEC-2/P/CIR/2023/122."
+  },
+  {
+    "requirement_id": "SEBI-BRSRCORE-002",
+    "regulation": "BRSR Core -- Assurance/Assessment",
+    "authority": "Securities and Exchange Board of India (SEBI)",
+    "industry": "Cross-industry (applies to the listed company, cement companies included)",
+    "requirement_description": "A listed entity's BRSR Core disclosures must be assured (or, since the March 2025 amendment, 'assessed' as an alternative to assurance) by an independent third party, phased in by market-capitalization band over four financial years.",
+    "applicability": "Phased by the parent company's market-cap rank: top 150 from FY2023-24, top 250 from FY2024-25, top 500 from FY2025-26, top 1,000 from FY2026-27.",
+    "applicability_conditions": [
+      {
+        "level": "company",
+        "criterion": "listed_entity_market_cap_rank",
+        "description": "Which glide-path band a company falls into determines the financial year its BRSR Core assurance/assessment obligation begins.",
+        "parameter": "top150:FY2023-24; top250:FY2024-25; top500:FY2025-26; top1000:FY2026-27"
+      },
+      {
+        "level": "company",
+        "criterion": "reporting_period",
+        "description": "The obligation only applies from the financial year corresponding to the company's market-cap band -- a top-500-but-not-top-250 company has no assurance obligation before FY2025-26.",
+        "parameter": null
+      }
+    ],
+    "metric": "BRSR Core assurance/assessment coverage",
+    "unit": "N/A (assurance obtained: yes/no)",
+    "target": "Reasonable assurance (or, from FY2024-25 onward per the March 2025 amendment, assessment per Industry Standards Forum standards) obtained and disclosed for the applicable financial year",
+    "reporting_period": "Glide path: FY2023-24 (top 150) through FY2026-27 (top 1,000)",
+    "reporting_frequency": "Annual, once the entity's band threshold is reached",
+    "required_evidence": [
+      "GHG Verification Statement / independent assurance or assessment provider's report",
+      "BRSR Core assurance/assessment statement filed with the Annual Report"
+    ],
+    "effective_date": "2023-07-12",
+    "source_id": "SEBI-BRSR-CORE-2023",
+    "source_title": "BRSR Core -- Framework for assurance and ESG disclosures for value chain",
+    "source_url": "https://ca2013.com/wp-content/uploads/2023/07/SEBI-Circular_12.07.2023.pdf",
+    "source_date": "2023-07-12",
+    "last_reviewed": "2026-09-12",
+    "confidence": "High",
+    "status": "Under Amendment",
+    "version": "2.0",
+    "superseded_or_amended_by": "SEBI-BRSR-EASE-2025 (28 Mar 2025)",
+    "notes": "The March 2025 amendment (SEBI/HO/CFD/CFD-PoD-1/P/CIR/2025/42) replaced 'Data & Assurance Approach' with 'Data & Assessment or Assurance Approach', giving entities the option of third-party assessment (per Industry Standards Forum standards) instead of formal assurance -- this record is versioned 2.0 to reflect that amendment. status is 'Under Amendment' because further easing changes have occurred roughly annually since 2023 and another may be pending; re-verify before relying on the glide path for a live compliance year."
+  },
+  {
+    "requirement_id": "SEBI-BRSRCORE-003",
+    "regulation": "BRSR Core -- Value Chain ESG Disclosure",
+    "authority": "Securities and Exchange Board of India (SEBI)",
+    "industry": "Cross-industry (applies to the listed company, cement companies included)",
+    "requirement_description": "A listed entity must extend BRSR Core-style ESG disclosure to its value chain -- upstream and downstream partners each individually comprising at least 2% of the entity's purchases/sales by value (an entity may cap total coverage at 75% of purchases/sales). Per the March 2025 amendment, FY2024-25 value-chain data reporting (due in FY2025-26) is voluntary, with assessment/assurance required from FY2026-27.",
+    "applicability": "Same top-1,000-listed-entity population as BRSR (SEBI-BRSR-001); a cement company's upstream raw-material/fuel suppliers or downstream distributors could themselves become subject to value-chain disclosure requests once this applies to their customer.",
+    "applicability_conditions": [
+      {
+        "level": "company",
+        "criterion": "listed_entity_market_cap_rank",
+        "description": "Same top-1,000 population as BRSR.",
+        "parameter": "Top 1000 by market capitalization"
+      },
+      {
+        "level": "company",
+        "criterion": "value_chain_partner_share",
+        "description": "A value chain partner is in scope only if it individually accounts for >=2% of the listed entity's purchases or sales by value.",
+        "parameter": ">=2% of purchases/sales by value; entity may cap disclosure at 75% cumulative coverage"
+      }
+    ],
+    "metric": "Value chain ESG disclosure coverage",
+    "unit": "N/A (disclosure coverage, not a measured quantity)",
+    "target": "Voluntary reporting of FY2024-25 value-chain data in FY2025-26; mandatory reporting with assessment/assurance from FY2026-27",
+    "reporting_period": "FY2025-26 (voluntary), FY2026-27 (mandatory with assessment/assurance)",
+    "reporting_frequency": "Annual, once applicable",
+    "required_evidence": [
+      "Value chain ESG disclosure (part of the Annual Report)",
+      "Value chain assessment/assurance statement (from FY2026-27)"
+    ],
+    "effective_date": "2025-03-28",
+    "source_id": "SEBI-BRSR-EASE-2025",
+    "source_title": "Measures to facilitate ease of doing business with respect to framework for assurance or assessment, ESG disclosures for value chain, and introduction of voluntary disclosure on green credits",
+    "source_url": "https://www.corporateprofessionals.com/regulatoryupdate/sebi-amends-esg-disclosure-norms-green-credits-value-chain-reporting-assurance-updates-circular-march-28-2025/",
+    "source_date": "2025-03-28",
+    "last_reviewed": "2026-09-12",
+    "confidence": "Medium",
+    "status": "Active",
+    "version": "2.0",
+    "superseded_or_amended_by": null,
+    "notes": "Circular No. SEBI/HO/CFD/CFD-PoD-1/P/CIR/2025/42, which itself amended and deferred the original value-chain timeline set by SEBI-BRSR-CORE-2023 (originally FY2024-25 voluntary / FY2025-26 assured, per that 2023 circular). Confidence is Medium because this record was built from secondary summaries of the March 2025 circular, not the primary sebi.gov.in text."
+  }
+]

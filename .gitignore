@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.db
+app/reports/generated/*
+!app/reports/generated/.gitkeep
+.env
+
+# One-off submission/export deliverables -- not source, regenerate anytime
+# with the scripts documented in README.md rather than tracking the output.
+Cement_ESG_Agent_Report.docx
+Cement_ESG_Agent_Code.zip
+Cement_ESG_Synthetic_Data.xlsx

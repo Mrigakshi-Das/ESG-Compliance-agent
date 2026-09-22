@@ -1,0 +1,19 @@
+plant_id,period,scope_1_tco2e,scope_2_tco2e,total_tco2e,emission_sources,source_system
+Plant A,FY2024-25 Q3,230680.0,25464.8,256144.8,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant A,FY2024-25 Q4,231575.0,25318.6,256893.6,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant A,FY2025-26 Q1,232440.0,24245.1,256685.1,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant A,FY2025-26 Q2,232500.0,23821.0,256321.0,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant A,FY2025-26 Q3,233310.0,23555.1,256865.1,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant A,FY2025-26 Q4,233325.0,23338.7,256663.7,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant B,FY2024-25 Q3,185400.0,16951.6,202351.6,Kiln fuel combustion; Calcination (process emissions); Standby DG sets (extended use during grid outages),CEMS_and_Utility_Bills
+Plant B,FY2024-25 Q4,185640.0,16623.9,202263.9,Kiln fuel combustion; Calcination (process emissions); Standby DG sets (extended use during grid outages),CEMS_and_Utility_Bills
+Plant B,FY2025-26 Q1,186850.0,16204.2,203054.2,Kiln fuel combustion; Calcination (process emissions); Standby DG sets (extended use during grid outages),CEMS_and_Utility_Bills
+Plant B,FY2025-26 Q2,173900.0,17723.0,191623.0,Kiln fuel combustion; Calcination (process emissions); Standby DG sets (extended use during grid outages),CEMS_and_Utility_Bills
+Plant B,FY2025-26 Q3,190080.0,16070.8,206150.8,Kiln fuel combustion; Calcination (process emissions); Standby DG sets (extended use during grid outages),CEMS_and_Utility_Bills
+Plant B,FY2025-26 Q4,191100.0,16083.1,207183.1,Kiln fuel combustion; Calcination (process emissions); Standby DG sets (extended use during grid outages),CEMS_and_Utility_Bills
+Plant C,FY2024-25 Q3,127595.0,11932.0,139527.0,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant C,FY2024-25 Q4,128826.0,11866.8,140692.8,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant C,FY2025-26 Q1,130200.0,11490.7,141690.7,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant C,FY2025-26 Q2,127376.0,11212.7,138588.7,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant C,FY2025-26 Q3,131252.0,11453.8,142705.8,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills
+Plant C,FY2025-26 Q4,131772.0,11352.9,143124.9,Kiln fuel combustion; Calcination (process emissions); Captive diesel genset (standby only),CEMS_and_Utility_Bills

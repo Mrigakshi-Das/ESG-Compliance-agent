@@ -1,0 +1,19 @@
+plant_id,period,waste_generated_tonnes,waste_recycled_tonnes,waste_utilized_tonnes,source_system
+Plant A,FY2024-25 Q3,460,312.8,82.8,Waste_Management_Register
+Plant A,FY2024-25 Q4,465,320.8,83.7,Waste_Management_Register
+Plant A,FY2025-26 Q1,470,329.0,89.3,Waste_Management_Register
+Plant A,FY2025-26 Q2,468,332.3,88.9,Waste_Management_Register
+Plant A,FY2025-26 Q3,472,339.8,89.7,Waste_Management_Register
+Plant A,FY2025-26 Q4,475,346.8,90.2,Waste_Management_Register
+Plant B,FY2024-25 Q3,610,335.5,73.2,Waste_Management_Register
+Plant B,FY2024-25 Q4,615,344.4,73.8,Waste_Management_Register
+Plant B,FY2025-26 Q1,620,353.4,74.4,Waste_Management_Register
+Plant B,FY2025-26 Q2,590,324.5,70.8,Waste_Management_Register
+Plant B,FY2025-26 Q3,610,683.2,61.0,Waste_Management_Register
+Plant B,FY2025-26 Q4,615,356.7,73.8,Waste_Management_Register
+Plant C,FY2024-25 Q3,340,204.0,51.0,Waste_Management_Register
+Plant C,FY2024-25 Q4,345,210.4,51.8,Waste_Management_Register
+Plant C,FY2025-26 Q1,348,215.8,55.7,Waste_Management_Register
+Plant C,FY2025-26 Q2,350,217.0,56.0,Waste_Management_Register
+Plant C,FY2025-26 Q3,352,221.8,56.3,Waste_Management_Register
+Plant C,FY2025-26 Q4,355,227.2,60.4,Waste_Management_Register

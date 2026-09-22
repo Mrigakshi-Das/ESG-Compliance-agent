@@ -1,0 +1,19 @@
+plant_id,period,gross_calorific_value_kcal_per_kg,ash_content_pct,moisture_content_pct,sulphur_content_pct,source_system
+Plant A,FY2024-25 Q3,5180,14.5,6.2,0.62,Fuel_Lab_QC
+Plant A,FY2024-25 Q4,5200,14.3,6.0,0.61,Fuel_Lab_QC
+Plant A,FY2025-26 Q1,5220,14.0,5.9,0.6,Fuel_Lab_QC
+Plant A,FY2025-26 Q2,5240,13.8,5.8,0.6,Fuel_Lab_QC
+Plant A,FY2025-26 Q3,5260,13.5,5.6,0.59,Fuel_Lab_QC
+Plant A,FY2025-26 Q4,5280,13.2,5.5,0.58,Fuel_Lab_QC
+Plant B,FY2024-25 Q3,4780,17.5,8.0,0.88,Fuel_Lab_QC
+Plant B,FY2024-25 Q4,4700,18.2,8.1,0.9,Fuel_Lab_QC
+Plant B,FY2025-26 Q1,4600,19.0,8.3,0.92,Fuel_Lab_QC
+Plant B,FY2025-26 Q2,4500,19.8,8.4,0.95,Fuel_Lab_QC
+Plant B,FY2025-26 Q3,4400,20.5,8.6,0.97,Fuel_Lab_QC
+Plant B,FY2025-26 Q4,4300,21.2,8.8,1.0,Fuel_Lab_QC
+Plant C,FY2024-25 Q3,4950,16.0,7.2,0.75,Fuel_Lab_QC
+Plant C,FY2024-25 Q4,4945,16.0,7.1,0.75,Fuel_Lab_QC
+Plant C,FY2025-26 Q1,4940,15.9,7.1,0.74,Fuel_Lab_QC
+Plant C,FY2025-26 Q2,4945,15.9,7.0,0.74,Fuel_Lab_QC
+Plant C,FY2025-26 Q3,4950,15.8,7.0,0.73,Fuel_Lab_QC
+Plant C,FY2025-26 Q4,4955,15.8,6.9,0.73,Fuel_Lab_QC

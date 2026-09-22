@@ -1,0 +1,226 @@
+[
+  {
+    "requirement_id": "BEE-PAT-001",
+    "regulation": "Perform, Achieve and Trade (PAT) Scheme",
+    "authority": "Bureau of Energy Efficiency (BEE), Ministry of Power",
+    "industry": "Cement",
+    "requirement_description": "An integrated cement plant whose annual energy consumption exceeds BEE's notified sectoral threshold is eligible to be designated a 'Designated Consumer' (DC) under the PAT scheme. Only plants individually gazette-notified as a DC for the current 3-year PAT cycle carry PAT obligations -- the scheme does not apply to a cement plant automatically by virtue of being a cement plant.",
+    "applicability": "Integrated cement manufacturing plants above the BEE PAT cement-sector energy threshold, and only once individually notified as a Designated Consumer for the current cycle.",
+    "applicability_conditions": [
+      {
+        "level": "plant",
+        "criterion": "annual_energy_consumption_toe",
+        "description": "Plant's annual energy consumption must exceed the BEE-notified sectoral threshold for cement to be eligible for DC designation.",
+        "parameter": "Historically >30,000 toe/year for cement (PAT Cycle I threshold); confirm the current cycle's threshold before use"
+      },
+      {
+        "level": "plant",
+        "criterion": "designated_consumer_status",
+        "description": "The plant must appear on BEE's gazette-notified Designated Consumer list for the current PAT cycle. DC status and the plant's individual SEC target are both assigned per plant, not inferred from energy consumption alone.",
+        "parameter": "Requires confirmation against the current PAT cycle's DC notification -- not determinable from plant operating data alone"
+      }
+    ],
+    "metric": "Designated Consumer eligibility / status",
+    "unit": "N/A (eligibility determination, not a measured quantity)",
+    "target": "N/A -- this requirement determines whether PAT applies to a given plant at all, not a compliance target",
+    "reporting_period": "Re-determined at the start of each PAT cycle (3 years); Cycle VII covered FY2022-23 to FY2024-25",
+    "reporting_frequency": "Re-assessed at the start of each PAT cycle",
+    "required_evidence": [
+      "BEE Designated Consumer notification (Gazette of India) naming the plant",
+      "Plant annual energy consumption records (toe)"
+    ],
+    "effective_date": "2012-04-01",
+    "source_id": "BEE-PAT-PROGRAM",
+    "source_title": "Perform, Achieve and Trade (PAT) Scheme",
+    "source_url": "https://beeindia.gov.in/en/programmes/perform-achieve-and-trade-pat",
+    "source_date": "2012-04-01",
+    "last_reviewed": "2026-09-12",
+    "confidence": "Medium",
+    "status": "Active",
+    "version": "1.0",
+    "superseded_or_amended_by": null,
+    "notes": "Cement has been covered since PAT Cycle I (2012); cement-sector eligibility thresholds and DC lists are reissued each cycle. This record's 30,000 toe/year figure reflects Cycle I as reported by BEE/secondary sources; it was not re-verified against a current-cycle sector notification in this session -- confidence is Medium for that reason, not because the underlying mechanism is in doubt."
+  },
+  {
+    "requirement_id": "BEE-PAT-002",
+    "regulation": "Perform, Achieve and Trade (PAT) Scheme",
+    "authority": "Bureau of Energy Efficiency (BEE), Ministry of Power",
+    "industry": "Cement",
+    "requirement_description": "A Designated Consumer must reduce its Specific Energy Consumption (SEC) to at or below the target individually assigned to it by BEE for the current PAT cycle, verified through an accredited/third-party energy auditor, and file a Performance Assessment Document (PAT Form-A) at cycle end.",
+    "applicability": "Cement plants confirmed as Designated Consumers for the current PAT cycle (see BEE-PAT-001).",
+    "applicability_conditions": [
+      {
+        "level": "plant",
+        "criterion": "designated_consumer_status",
+        "description": "This obligation only attaches once BEE-PAT-001's DC status is confirmed for the specific plant.",
+        "parameter": null
+      }
+    ],
+    "metric": "Specific Energy Consumption (SEC)",
+    "unit": "Plant-specific (BEE assigns the unit -- typically Gcal or toe per tonne of production -- per DC per cycle)",
+    "target": "Set individually per Designated Consumer by BEE for each PAT cycle, as a percentage SEC reduction from that DC's own baseline -- there is no single sector-wide numeric target. This KB does not hard-code a number; use the specific DC's target from BEE's cycle notification for the plant in question.",
+    "reporting_period": "PAT Cycle VII: FY2022-23 to FY2024-25 (per PIB reporting); confirm the currently active cycle before use, since a later cycle may now be in force",
+    "reporting_frequency": "Assessed once at PAT cycle-end (every 3 years); energy data submitted annually in the interim",
+    "required_evidence": [
+      "Third-party/accredited energy auditor verification report",
+      "PAT Performance Assessment Document (Form-A)",
+      "Energy Savings Certificate (ESCert) issuance or purchase record"
+    ],
+    "effective_date": "2021-10-01",
+    "source_id": "PIB-PAT-CYCLES",
+    "source_title": "Three years of PAT Scheme constitutes of 7 cycles (press release)",
+    "source_url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1811051",
+    "source_date": "2022-04-01",
+    "last_reviewed": "2026-09-12",
+    "confidence": "Medium",
+    "status": "Active",
+    "version": "1.0",
+    "superseded_or_amended_by": null,
+    "notes": "PAT Cycle VII (509 DCs, ~6.627 MTOE aggregate target, FY2022-23 to FY2024-25) is the most recent cycle confirmed via a government (PIB) source in this session. A subsequent cycle (VIII) covering FY2025-26 onward may already be notified in the real world; this record's reporting_period should be re-verified against BEE's current cycle notification, and last_reviewed re-set, before being used for an active compliance determination."
+  },
+  {
+    "requirement_id": "BEE-PAT-003",
+    "regulation": "Perform, Achieve and Trade (PAT) Scheme",
+    "authority": "Bureau of Energy Efficiency (BEE), Ministry of Power",
+    "industry": "Cement",
+    "requirement_description": "At PAT cycle-end verification, a Designated Consumer that has exceeded its SEC target may be issued tradable Energy Saving Certificates (ESCerts) for the surplus; a Designated Consumer that has not met its target must purchase ESCerts (via the power exchanges) to cover the shortfall, or is liable to a penalty under the Energy Conservation Act, 2001.",
+    "applicability": "Cement plants confirmed as Designated Consumers for the current PAT cycle, after cycle-end SEC verification (see BEE-PAT-001, BEE-PAT-002).",
+    "applicability_conditions": [
+      {
+        "level": "plant",
+        "criterion": "designated_consumer_status",
+        "description": "Applies only after a DC's cycle-end SEC performance has been verified against BEE-PAT-002's target.",
+        "parameter": null
+      }
+    ],
+    "metric": "Net ESCert balance at cycle-end",
+    "unit": "ESCerts (1 ESCert = 1 toe of energy saved)",
+    "target": "Net ESCert balance >= 0 at cycle-end verification (target SEC met, or any shortfall fully covered by purchased ESCerts)",
+    "reporting_period": "At the end of each PAT cycle (see BEE-PAT-002)",
+    "reporting_frequency": "Once per PAT cycle, at cycle-end verification",
+    "required_evidence": [
+      "ESCert trading/settlement record (Indian Energy Exchange / Power Exchange India)",
+      "BEE cycle-end compliance order for the plant"
+    ],
+    "effective_date": "2012-04-01",
+    "source_id": "BEE-PAT-PROGRAM",
+    "source_title": "Perform, Achieve and Trade (PAT) Scheme",
+    "source_url": "https://beeindia.gov.in/en/programmes/perform-achieve-and-trade-pat",
+    "source_date": "2012-04-01",
+    "last_reviewed": "2026-09-12",
+    "confidence": "Medium",
+    "status": "Active",
+    "version": "1.0",
+    "superseded_or_amended_by": null,
+    "notes": "ESCert trading mechanics were not independently re-verified beyond BEE's own program-page description in this session."
+  },
+  {
+    "requirement_id": "BEE-CCTS-001",
+    "regulation": "Carbon Credit Trading Scheme (CCTS), 2023",
+    "authority": "Ministry of Power (Scheme) / Ministry of Environment, Forest and Climate Change (obligated-entity GEI targets)",
+    "industry": "Cement",
+    "requirement_description": "A cement manufacturing unit individually named in the Schedule to the Greenhouse Gases Emission Intensity (GEI) Target Rules is an 'obligated entity' under the Carbon Credit Trading Scheme, 2023, and must comply with the GHG emission intensity target assigned to it for each compliance year. Obligated-entity status attaches to the individually named unit (by name, address, and registration number), not to a company or the cement sector generally.",
+    "applicability": "One of the cement units individually named in the Schedule to the Greenhouse Gases Emission Intensity Target Rules, 2025 (186 cement units named in the 16-Apr-2025 draft Schedule, across Portland Pozzolana Cement, Ordinary Portland Cement, Composite, Clinkerization, White Cement, and Grinding sub-sectors).",
+    "applicability_conditions": [
+      {
+        "level": "plant",
+        "criterion": "obligated_entity_status",
+        "description": "The specific unit (identified by name, address, and registration number, e.g. 'CMTOE0xx...') must appear in the Schedule to the GEI Target Rules or a subsequent amendment. This cannot be inferred from a plant's production volume, sub-sector, or energy consumption alone -- it requires a name match against the published Schedule.",
+        "parameter": "186 cement units named in the draft Schedule (16 Apr 2025); confirm against the final Schedule (G.S.R. 739(E), 8 Oct 2025) and its 13-Jan-2026 amendment, since the entity list and figures can change between draft and final"
+      }
+    ],
+    "metric": "Obligated Entity status",
+    "unit": "N/A",
+    "target": "N/A -- eligibility determination",
+    "reporting_period": "Compliance years FY2025-26 and FY2026-27 (the two years covered by the current GEI Target Rules)",
+    "reporting_frequency": "Entity list set at notification/amendment; applicability confirmed for each compliance year",
+    "required_evidence": [
+      "Entry in the Schedule to the Greenhouse Gases Emission Intensity Target Rules, 2025 (or a subsequent amendment) naming the unit by name/address/registration number"
+    ],
+    "effective_date": "2025-10-08",
+    "source_id": "MOEFCC-GEI-DRAFT-2025",
+    "source_title": "Greenhouse Gases Emission Intensity Target Rules, 2025 (draft, G.S.R. 234(E))",
+    "source_url": "https://ccc-consultants.org/wp-content/uploads/2025/05/Ministry-of-Environment-Notification-GEI-Targets-CCTS_targets_2025_1745301648_.pdf",
+    "source_date": "2025-04-16",
+    "last_reviewed": "2026-09-12",
+    "confidence": "High",
+    "status": "Active",
+    "version": "1.0",
+    "superseded_or_amended_by": "MOEFCC-GEI-FINAL-2025 (G.S.R. 739(E), 8 Oct 2025); further amended 13 Jan 2026 -- see source registry",
+    "notes": "The draft Schedule's full text was read directly from the primary Gazette PDF in this session (Ministry of Environment Forest and Climate Change, New Delhi, 16 April 2025, F.No. HSM-12/114/2022). None of this KB's synthetic demo plants (Plant A/B/C) appear in that Schedule -- they are fictional and were never gazette-notified. This requirement's applicability logic must never assume a real plant is an obligated entity without a name match against the actual (final, amended) Schedule."
+  },
+  {
+    "requirement_id": "BEE-CCTS-002",
+    "regulation": "Carbon Credit Trading Scheme (CCTS), 2023 -- GHG Emission Intensity (GEI) targets",
+    "authority": "Ministry of Environment, Forest and Climate Change (MoEFCC)",
+    "industry": "Cement",
+    "requirement_description": "An obligated cement entity (see BEE-CCTS-001) must achieve the GHG Emission Intensity (GEI) target individually assigned to it in the Schedule for each compliance year, calculated per the methodology in BEE's Detailed Procedure, relative to its own FY2023-24 baseline GEI.",
+    "applicability": "Cement units confirmed as obligated entities under BEE-CCTS-001.",
+    "applicability_conditions": [
+      {
+        "level": "plant",
+        "criterion": "obligated_entity_status",
+        "description": "Only applies once BEE-CCTS-001 confirms the unit is named in the Schedule.",
+        "parameter": null
+      }
+    ],
+    "metric": "GHG Emission Intensity (GEI)",
+    "unit": "tCO2e per tonne of equivalent product",
+    "target": "Entity-specific -- set individually per named unit in the Schedule; there is no single sector-wide numeric target. Illustrative range actually observed across the 186 named cement units in the draft Schedule (16 Apr 2025), by cement sub-sector: Composite/blended cement baseline ~0.32-0.51 tCO2e/t (lowest, due to low clinker factor); Portland Pozzolana Cement baseline ~0.45-0.60 tCO2e/t; Ordinary Portland Cement baseline ~0.73-1.10 tCO2e/t (highest, full-clinker product); Clinkerization-only units ~0.77-0.87 tCO2e/t; grinding-only units (no kiln) ~0.001-0.15 tCO2e/t. Compliance-year targets step down from each unit's own baseline by roughly 1-3% for FY2025-26 and a further increment for FY2026-27 -- the exact percentage varies per unit and is not uniform.",
+    "reporting_period": "Baseline: FY2023-24. Compliance years: FY2025-26 and FY2026-27.",
+    "reporting_frequency": "Annual, against the target for that specific compliance year",
+    "required_evidence": [
+      "GHG Verification Statement / accredited carbon verification agency report",
+      "Indian Carbon Market (ICM) Portal registration and submission record",
+      "Production records (tonnes of equivalent product) for the compliance year"
+    ],
+    "effective_date": "2025-10-08",
+    "source_id": "MOEFCC-GEI-DRAFT-2025",
+    "source_title": "Greenhouse Gases Emission Intensity Target Rules, 2025 (draft, G.S.R. 234(E))",
+    "source_url": "https://ccc-consultants.org/wp-content/uploads/2025/05/Ministry-of-Environment-Notification-GEI-Targets-CCTS_targets_2025_1745301648_.pdf",
+    "source_date": "2025-04-16",
+    "last_reviewed": "2026-09-12",
+    "confidence": "High",
+    "status": "Active",
+    "version": "1.0",
+    "superseded_or_amended_by": "MOEFCC-GEI-FINAL-2025 (G.S.R. 739(E), 8 Oct 2025); further amended 13 Jan 2026 -- see source registry",
+    "notes": "The illustrative range above was computed directly from the draft Schedule's own baseline/target columns (read in full in this session), not from a secondary summary -- but it is the DRAFT Schedule; the finalized figures (G.S.R. 739(E)) and the 13-Jan-2026 amendment were not independently re-read and may differ. Never apply this range to a specific plant as if it were that plant's assigned target -- only the named Schedule entry for that exact unit is authoritative."
+  },
+  {
+    "requirement_id": "BEE-CCTS-003",
+    "regulation": "Carbon Credit Trading Scheme (CCTS), 2023",
+    "authority": "Ministry of Environment, Forest and Climate Change (MoEFCC) / Bureau of Energy Efficiency (BEE)",
+    "industry": "Cement",
+    "requirement_description": "An obligated entity that does not achieve its GEI target for a compliance year must purchase and submit Carbon Credit Certificates (CCCs) equivalent to its shortfall via the Indian Carbon Market; an entity that outperforms its target is issued CCCs for the surplus, which may be sold or banked. Failure to submit sufficient CCCs for the shortfall triggers Environmental Compensation imposed by CPCB, equal to twice the average CCC trading price for that compliance year.",
+    "applicability": "Cement units confirmed as obligated entities under BEE-CCTS-001, after compliance-year GEI verification.",
+    "applicability_conditions": [
+      {
+        "level": "plant",
+        "criterion": "obligated_entity_status",
+        "description": "Applies only after a unit's compliance-year GEI has been verified against its BEE-CCTS-002 target.",
+        "parameter": null
+      }
+    ],
+    "metric": "Carbon Credit Certificate (CCC) compliance balance",
+    "unit": "Carbon Credit Certificates (1 CCC = 1 tCO2e)",
+    "target": "Shortfall (GEI Achieved - GEI Target) x product output, in CCCs, fully covered by banked or purchased CCCs each compliance year -- formula per Rule 6 of the GEI Target Rules",
+    "reporting_period": "Annual, per compliance year (FY2025-26, FY2026-27)",
+    "reporting_frequency": "Annual, within the timeline stipulated in BEE's Detailed Procedure",
+    "required_evidence": [
+      "Carbon Credit Certificate issuance/purchase/banking record (Indian Carbon Market)",
+      "ICM Portal submission confirmation",
+      "CPCB Environmental Compensation payment record, if applicable"
+    ],
+    "effective_date": "2025-10-08",
+    "source_id": "MOEFCC-GEI-DRAFT-2025",
+    "source_title": "Greenhouse Gases Emission Intensity Target Rules, 2025 (draft, G.S.R. 234(E))",
+    "source_url": "https://ccc-consultants.org/wp-content/uploads/2025/05/Ministry-of-Environment-Notification-GEI-Targets-CCTS_targets_2025_1745301648_.pdf",
+    "source_date": "2025-04-16",
+    "last_reviewed": "2026-09-12",
+    "confidence": "High",
+    "status": "Active",
+    "version": "1.0",
+    "superseded_or_amended_by": "MOEFCC-GEI-FINAL-2025 (G.S.R. 739(E), 8 Oct 2025); further amended 13 Jan 2026 -- see source registry",
+    "notes": "CCC issuance/purchase formulas and the Environmental Compensation mechanism (Rules 6-7) were read directly from the primary draft text in this session."
+  }
+]

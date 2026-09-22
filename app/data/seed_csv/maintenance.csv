@@ -1,0 +1,9 @@
+plant_id,equipment,maintenance_date,period,maintenance_type,maintenance_status,issue,planned_next_maintenance
+Plant A,Kiln ESP (Electrostatic Precipitator),2025-11-12,FY2025-26 Q3,Preventive,Completed,Routine electrode cleaning and inspection,2026-05-12
+Plant A,CEMS Stack Analyzer,2026-03-25,FY2025-26 Q4,Calibration,Completed,Routine 6-month recalibration per CPCB CEMS protocol; completed on schedule,2026-09-25
+Plant A,Raw Mill Drive Motor,2026-03-02,FY2025-26 Q4,Preventive,Completed,Bearing lubrication and vibration check,2026-12-02
+Plant B,Kiln Refractory Lining,2024-12-15,FY2024-25 Q3,Inspection,Overdue,Refractory wear accelerating; relining inspection deferred twice due to production schedule pressure -- contributing to rising kiln thermal energy consumption,2025-06-15
+Plant B,Stack CEMS Analyzer (SO2/NOx/PM),2025-09-10,FY2025-26 Q2,Calibration,Overdue,Mandatory 6-month recalibration under CPCB CEMS protocol not completed; current stack monitoring data cannot be certified,2026-03-10
+Plant B,Raw Mill Motor Bearing (Line 2),2025-08-18,FY2025-26 Q2,Breakdown/Corrective,Completed,Unplanned bearing failure caused ~3 weeks of reduced-capacity operation and elevated specific electricity consumption,2026-08-18
+Plant C,Kiln ESP (Electrostatic Precipitator),2025-10-05,FY2025-26 Q3,Preventive,Completed,Routine electrode cleaning and inspection,2026-04-05
+Plant C,CEMS Stack Analyzer,2026-03-20,FY2025-26 Q4,Calibration,Completed,Routine 6-month recalibration per CPCB CEMS protocol; completed on schedule,2026-09-20

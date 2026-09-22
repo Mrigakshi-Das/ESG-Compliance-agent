@@ -1,0 +1,102 @@
+[
+  {
+    "source_id": "BEE-PAT-PROGRAM",
+    "title": "Perform, Achieve and Trade (PAT) Scheme",
+    "authority": "Bureau of Energy Efficiency (BEE), Ministry of Power",
+    "document_type": "Program page (scheme overview)",
+    "url": "https://beeindia.gov.in/en/programmes/perform-achieve-and-trade-pat",
+    "publication_date": "2012-04-01",
+    "retrieved_date": "2026-09-12",
+    "notes": "BEE's own program page describing PAT mechanism, cycle structure, and sectoral coverage. Does not itself list current-cycle Designated Consumers or thresholds -- those are in cycle-specific gazette notifications not retrieved in this session."
+  },
+  {
+    "source_id": "PIB-PAT-CYCLES",
+    "title": "Three years of PAT Scheme constitutes of 7 cycles (press release)",
+    "authority": "Press Information Bureau, Government of India / Ministry of Power",
+    "document_type": "Press release",
+    "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1811051",
+    "publication_date": "2022-04-01",
+    "retrieved_date": "2026-09-12",
+    "notes": "Secondary confirmation (via PIB, a government source) that PAT Cycle VII was notified October 2021 for FY2022-23 to FY2024-25, covering cement among other sectors. A later cycle (VIII) may now be current in FY2025-26/26-27 -- not verified against a primary cycle notification in this session; see requirement notes."
+  },
+  {
+    "source_id": "MOP-CCTS-2023",
+    "title": "Carbon Credit Trading Scheme, 2023",
+    "authority": "Ministry of Power, Government of India",
+    "document_type": "Scheme notification (S.O. 2825(E))",
+    "url": "https://www.scconline.com/blog/post/2023/07/01/govt-notifies-carbon-credit-trading-scheme-to-govern-carbon-market-legal-news/",
+    "publication_date": "2023-06-28",
+    "retrieved_date": "2026-09-12",
+    "notes": "Notified under clause (w) of section 14 of the Energy Conservation Act, 2001, per the GEI Target Rules' own preamble (see MOEFCC-GEI-DRAFT-2025 below). Legal-database secondary source used because the primary egazette.gov.in text of S.O. 2825(E) itself was not directly retrievable in this session; the S.O. number, date, and legal basis are corroborated by the MoEFCC notification that implements it."
+  },
+  {
+    "source_id": "BEE-CCTS-DETAILED-PROCEDURE-2024",
+    "title": "Detailed Procedure for Compliance Mechanism under Carbon Credit Trading Scheme (CCTS)",
+    "authority": "Bureau of Energy Efficiency (BEE)",
+    "document_type": "Procedure notification",
+    "url": "https://enviliance.com/regions/south-asia/in/report_12506",
+    "publication_date": "2024-07-22",
+    "retrieved_date": "2026-09-12",
+    "notes": "Secondary source; the primary BEE-published Detailed Procedure PDF was not directly retrieved in this session."
+  },
+  {
+    "source_id": "MOEFCC-GEI-DRAFT-2025",
+    "title": "Greenhouse Gases Emission Intensity Target Rules, 2025 (draft, G.S.R. 234(E))",
+    "authority": "Ministry of Environment, Forest and Climate Change (MoEFCC)",
+    "document_type": "Draft rules (Gazette of India, Extraordinary, Part II, Section 3(i))",
+    "url": "https://ccc-consultants.org/wp-content/uploads/2025/05/Ministry-of-Environment-Notification-GEI-Targets-CCTS_targets_2025_1745301648_.pdf",
+    "publication_date": "2025-04-16",
+    "retrieved_date": "2026-09-12",
+    "notes": "PRIMARY SOURCE TEXT retrieved and read directly in this session (mirrored copy of the Gazette of India Extraordinary notification; the official host is egazette.gov.in / moefcc.gov.in, not independently re-verified in this session). Issued under sections 3, 6 and 25 of the Environment (Protection) Act, 1986, to operationalize the Carbon Credit Trading Scheme, 2023. This is a DRAFT with a 60-day objection window from publication -- superseded by the final rules (see MOEFCC-GEI-FINAL-2025). Contains the full Schedule of named obligated entities (282 units across aluminium/cement/chlor-alkali/pulp & paper, 186 of them cement) with each entity's baseline (FY2023-24) GHG emission intensity and its compliance-year targets for FY2025-26 and FY2026-27. F. No. HSM-12/114/2022, signed Nameeta Prasad, Joint Secretary."
+  },
+  {
+    "source_id": "MOEFCC-GEI-FINAL-2025",
+    "title": "Greenhouse Gases Emission Intensity Target Rules, 2025 (final, G.S.R. 739(E))",
+    "authority": "Ministry of Environment, Forest and Climate Change (MoEFCC)",
+    "document_type": "Rules (Gazette notification)",
+    "url": "https://www.corporateprofessionals.com/regulatoryupdate/greenhouse-gases-emission-intensity-target-rules-2025/",
+    "publication_date": "2025-10-08",
+    "retrieved_date": "2026-09-12",
+    "notes": "Secondary source describing the final notification following the draft's comment period; the primary final Schedule text (which may carry revised per-entity figures from the draft above) was not independently retrieved in this session -- treat the draft's per-entity figures as illustrative of the mechanism and range, not confirmed final values."
+  },
+  {
+    "source_id": "MOEFCC-GEI-AMENDMENT-2026",
+    "title": "Greenhouse Gases Emission Intensity Target (Amendment) Rules, 2025",
+    "authority": "Ministry of Environment, Forest and Climate Change (MoEFCC)",
+    "document_type": "Amendment rules",
+    "url": "https://www.corporateprofessionals.com/regulatoryupdate/greenhouse-gases-emission-intensity-target-amendment-rules-2025/",
+    "publication_date": "2026-01-13",
+    "retrieved_date": "2026-09-12",
+    "notes": "Amends the final GEI Target Rules, 2025; specific amended provisions not independently retrieved in this session. Included primarily to demonstrate the KB's version-control mechanism (an amendment dated after the base rule's source_date should surface via superseded_or_amended_by / staleness checks)."
+  },
+  {
+    "source_id": "SEBI-BRSR-2021",
+    "title": "Business Responsibility and Sustainability Reporting by Listed Entities",
+    "authority": "Securities and Exchange Board of India (SEBI)",
+    "document_type": "Circular",
+    "url": "https://www.sebi.gov.in/legal/circulars/may-2021/business-responsibility-and-sustainability-reporting-by-listed-entities_50096.html",
+    "publication_date": "2021-05-10",
+    "retrieved_date": "2026-09-12",
+    "notes": "Circular No. SEBI/HO/CFD/CMD-2/P/CIR/2021/562. Primary source confirmed directly on sebi.gov.in (fetched in this session), though the fetched page exposed only header/metadata, not the full operative text -- applicability/effective-date facts below are corroborated by SEBI's own press release of the same date."
+  },
+  {
+    "source_id": "SEBI-BRSR-CORE-2023",
+    "title": "BRSR Core -- Framework for assurance and ESG disclosures for value chain",
+    "authority": "Securities and Exchange Board of India (SEBI)",
+    "document_type": "Circular",
+    "url": "https://ca2013.com/wp-content/uploads/2023/07/SEBI-Circular_12.07.2023.pdf",
+    "publication_date": "2023-07-12",
+    "retrieved_date": "2026-09-12",
+    "notes": "Circular No. SEBI/HO/CFD/CFD-SEC-2/P/CIR/2023/122. Full circular text located via a legal-archive mirror; sebi.gov.in hosts the original but was not directly fetched in this session."
+  },
+  {
+    "source_id": "SEBI-BRSR-EASE-2025",
+    "title": "Measures to facilitate ease of doing business with respect to framework for assurance or assessment, ESG disclosures for value chain, and introduction of voluntary disclosure on green credits",
+    "authority": "Securities and Exchange Board of India (SEBI)",
+    "document_type": "Circular (amendment)",
+    "url": "https://www.corporateprofessionals.com/regulatoryupdate/sebi-amends-esg-disclosure-norms-green-credits-value-chain-reporting-assurance-updates-circular-march-28-2025/",
+    "publication_date": "2025-03-28",
+    "retrieved_date": "2026-09-12",
+    "notes": "Circular No. SEBI/HO/CFD/CFD-PoD-1/P/CIR/2025/42. Amends SEBI-BRSR-CORE-2023: introduces 'assessment' as an alternative to 'assurance', narrows value-chain scope to partners individually >=2% of purchases/sales, and defers value-chain ESG disclosure by one FY. Primary sebi.gov.in text not directly fetched in this session; corroborated by multiple independent secondary summaries."
+  }
+]
